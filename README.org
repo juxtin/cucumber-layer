@@ -1,0 +1,33 @@
+#+TITLE: cucumber layer
+
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+  - [[#features][Features:]]
+- [[#install][Install]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+This layer adds support for Gherkin and Cucumber via =feature-mode=.
+
+** Features:
+  - Syntax highlighting for Gherkin
+  - Run tests from Spacemacs
+  - Go to step definitions
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =cucumber= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+See the [[https://github.com/michaelklishin/cucumber.el/blob/master/README.md][cucumber.el README]] for important information on installing the Ruby
+dependencies for =feature-mode=.
+
+* Key bindings
+
+| Key Binding | Description                                                             |
+|-------------+-------------------------------------------------------------------------|
+| ~SPC m v~   | Verify all scenarios in the current buffer file.                        |
+| ~SPC m s~   | Verify the scenario under the point in the current buffer.              |
+| ~SPC m f~   | Verify all features in project. (Available in feature and ruby files).  |
+| ~SPC m r~   | Repeat the last verification process.                                   |
+| ~SPC m g~   | Go to step-definition under point (requires ruby_parser gem >= 2.0.5).  |
